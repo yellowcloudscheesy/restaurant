@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homepage</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!--web-font-->
+<link href='http://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800,400italic' rel='stylesheet' type='text/css'>
+<!--//web-font-->
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+
+
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+<script>
+	$(document).ready(function () {
+	    size_li = $("#myList li").size();
+	    x=1;
+	    $('#myList li:lt('+x+')').show();
+	    $('#loadMore').click(function () {
+	        x= (x+1 <= size_li) ? x+1 : size_li;
+	        $('#myList li:lt('+x+')').show();
+	    });
+	    $('#showLess').click(function () {
+	        x=(x-1<0) ? 1 : x-1;
+	        $('#myList li').not(':lt('+x+')').hide();
+	    });
+	});
+</script>
+</head>
+<body>
+	<!--header-->
+	<div class="header">
+		<div class="container">
+			<div class="header-logo">
+				<a href="index.html"><img src="images/logo1.png"alt="LOGO"/></a>
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="images/menu-icon.png" alt=""/></span>		
+				<ul class="nav1 cl-effect-5">
+					<li><a href="index.html" class="active"><span data-hover="Home">Home</span></a></li>
+					<li><a href="menu.html"> <span data-hover="Menu"> Menu </span> </a></li>
+					<li><a href="reservations.html"><span data-hover="Reservations">Reservations </span></a></li>
+					<li><a href="news.html"><span data-hover="News">News</span></a></li>
+					<li><a href="index.html"><span data-hover="Reviews"> Reviews </span></a></li>
+				</ul>
+				<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+				</script>
+				<!-- /script-for-menu -->
+			</div>	
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//header-->
+	<!--banner-->
+	<div class="banner">
+<div class="container">
+           
+		<div class="banner-text">
+				<h1>Welcome to our Restaurant</h1>
+				<div class="bnr-text-info">
+					<h6>Restaurant homepage</h6>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!--//banner-->
+	<!--dishes-->
+	<div class="dishes1">
+		<div class="container">
+			<!-- banner-text Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				 <script>
+					// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+							$("#slider3").responsiveSlides({
+							auto: true,
+							pager:true,
+							nav:false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+								$('.events').append("<li>after event fired.</li>");
+							}
+						});	
+					});
+				</script>
+			<!--//End-slider-script -->
+			<div  id="top" class="callbacks_container">
+				<div class="title">
+					<h3>OUR SPECIALITIES</h3>
+				</div>
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="dishes">
+							<div class="col-md-3 dishes-grids">
+								<img src="images/1.jpg" alt="" width="362" height="216" title=""/>
+								<div class="dishes-text">
+									<p>dolorem ipsum</p>
+									<h4 class="rs">$ 40</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/2.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>quia dolor sit</p>
+									<h4 class="rs">$30</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/3.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>dolorem ipsum</p>
+									<h4 class="rs">$60</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/4.jpg" alt=""  title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$60</h4>
+									
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+					</li>
+					<li>
+						<div class="dishes">
+							<div class="col-md-3 dishes-grids">
+								<img src="images/5.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Fugiat nulla sint</p>
+									<h4 class="rs">$30</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/6.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Neque porro quisquam</p>
+									<h4 class="rs">$40</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/7.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$60</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/8.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$17</h4>
+									
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+					</li>
+					<li>
+						<div class="dishes">
+							<div class="col-md-3 dishes-grids">
+								<img src="images/9.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$30</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/10.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$24</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/11.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$60</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/12.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$17</h4>
+									
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+					</li>
+					<li>
+						<div class="dishes">
+							<div class="col-md-3 dishes-grids">
+								<img src="images/13.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$30</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/14.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$24</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/15.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$60</h4>
+									
+								</div>
+							</div>
+							<div class="col-md-3 dishes-grids">
+								<img src="images/14.jpg" alt="" title=""/>
+								<div class="dishes-text">
+									<p>Lorem Ipsum</p>
+									<h4 class="rs">$24</h4>
+									
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	<!--//dishes-->
+	<!--banner-bottom-->
+	<div class="banner-bottom">
+		<div class="container">
+			<div class="menu-tag">
+				<h4>The Menu</h4>
+			</div>
+			<div class="load_more">	
+			<ul id="myList">
+				<li>
+					<div class="l_g">
+						<div class="l_g_r">
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$ 50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div> 
+					</div>	
+				</li>
+				<li><div class="l_g">
+						<div class="l_g_r g_r">
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"></span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</li>
+				<li><div class="l_g">
+						<div class="l_g_r g_r">
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="col-md-6 menu-grids">
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$50</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>	
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$62</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$25</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="menu-text">
+									<div class="menu-text-left">
+										<h4>Lorem ipsum dolor sit.</h4>
+										<h6>sit amet, consectetur, adipisci velit.</h6>
+									</div>
+									<div class="menu-text-midle">
+										<span class="line"> </span>
+									</div>
+									<div class="menu-text-right">
+										<h4>$30</h4>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+					</div>	
+				</li>
+			</ul>
+			<div id="loadMore">load more</div>
+			<div id="showLess">show less</div>
+		</div>
+		</div>
+	</div>
+	<!--//banner-bottom-->
+	<!--gallery-->
+	<div class="gallery">
+		<div class="container">
+			<div class="title">
+				<h3>OUR FOOD GALLERY</h3>
+			</div>
+			<div class="gallery-grids">
+				<div class="gallery-grids-left glry-img glry-first">
+					<a href="images/gallery1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Lorem ipsum dolor">
+						<img src="images/gallery1.jpg" alt="" class="img-responsive zoom-img"/>
+					</a>
+				</div>
+				<div class="gallery-grids-left">
+				    <div class="glry-img">
+                    <a href="images/Gallery22.jpg" class="swipebox"  title="Lorem ipsum dolor">
+               		<img src="images/Gallery22.jpg" alt="" class="img-responsive zoom-img"/></a>
+                    </div>
+					<div class="glry-img">
+						<a href="images/Gallery33.jpg" class="swipebox"  title="Lorem ipsum dolor">
+							<img src="images/Gallery33.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>	
+				</div>
+				<div class="gallery-grids-left">
+					<div class="glry-img">
+						<a href="images/Gallery44.jpg" class="swipebox"  title="Lorem ipsum dolor">
+							<img src="images/Gallery44.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="glry-img">
+						<a href="images/Gallery55.jpg" class="swipebox"  title="Lorem ipsum dolor">
+							<img src="images/Gallery55.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				<!--swipebox -->	
+				<link rel="stylesheet" href="css/swipebox.css">
+					<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+				<!--//swipebox Ends -->
+			</div>
+		</div>
+	</div>
+	<!--//gallery-->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 footer-left">
+				<ul>
+					<li>Neque porro quisquam est</li>
+					<li>dolorem ipsum quia dolor</li>
+					<li>Panjim, GA 403521</li>
+					<li>999-999-9999</li>
+				</ul>				
+			</div>
+			<div class="col-md-3 footer-left">
+				<ul>
+					<li>Neque porro quisquam est</li>
+					<li>dolorem ipsum quia dolor</li>
+					<li>Mapusa Goa</li>
+					<li>999-999-9999</li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-left">
+				<ul>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-right">
+				<a href="index.html"><img src="images/logo1.png" alt="logo"/></a>
+				<p>© 2015 All rights reserved | Design by <a href="http://www.it2theworld.com"> it2theworld</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//footer-->
+	<!--smooth-scrolling-of-move-up-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+			images/Gallery33.jpg
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->	
+</body>
+</html>	
